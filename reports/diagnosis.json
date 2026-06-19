@@ -1,0 +1,1400 @@
+{
+  "1": {
+    "question_id": 1,
+    "question": "Awareness — do users know discovery features exist?",
+    "theme_count": 8,
+    "total_volume": 475,
+    "themes": [
+      {
+        "theme_label": "Monetization Over Users",
+        "summary": "Users feel Spotify prioritizes money over experience",
+        "cluster_id": 17,
+        "volume": 89,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Don’t know even know where Spotify even began to purge downhill, but it did. Everything is incredibly money grabbing now. Why do I have to get premium to skip songs, queue songs, choose what I want to listen to, AND look at the lyrics. You can AT LEAST let us look at the lyrics, since it was always free up until around two years ago, which, by the way, seems greedy and money-hungry. Getting premium is practically a must at this point, considering you’ve taken away all the freedoms we once had, a",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198594337",
+            "rating": 2,
+            "created_at": "2026-06-18 19:47:37+00:00"
+          },
+          {
+            "text": "This app has continued to disappoint in the last few months. As they’ve added more and more unwanted content… audio books etc. it’s become slower and slower. Its core purpose is to download and listen to music. It’s glitchy now on ‘downloaded’ playlists on different devices and often can’t access downloaded content offline to listen to. It’s also performing poorly on iPad… have recently replaced to new iPad and still the same problems. Family and friends are also all having problems, not all bas",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14163729401",
+            "rating": 2,
+            "created_at": "2026-06-09 21:37:32+00:00"
+          },
+          {
+            "text": "Tbh I wanted to rate it 0 but there’s no option cuz istg this is the most stupidest ever app.. they just wanna make money by shoeing and adds. I literally just changed a song and everytime I do that a add comes up and also the app is really not build for iPads it takes hours to reload and the app works really slow… I’ve been using Spotify since a long time and at the beginning the used to be very nice but now the quality goes way low. Using this app is now a hassle for me.it takes sooo longgggg ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14168862031",
+            "rating": 1,
+            "created_at": "2026-06-11 06:36:41+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Premium Limitations",
+        "summary": "Users struggle with limited features",
+        "cluster_id": 49,
+        "volume": 72,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I love that we can listen to any music that is on there, game soundtracks, audiobooks, podcasts, etc. I also love that we can make several playlists and the app will suggest songs that match the vibe. \n\nHowever, one thing that sometimes gets annoying, is that for people who either can't afford Premium or have something holding them back from getting it, they have a small amount of chances to choose a song they want to listen to right there and then. \n\nI understand that you need a way to get peop",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198320744",
+            "rating": 4,
+            "created_at": "2026-06-18 18:16:20+00:00"
+          },
+          {
+            "text": "It takes 5 minutes to get a song to load with good wifi and even longer to load liked songs. I didn’t have this issue before it updated. What’s the point in paying for premium listening when I’m only able to load a handful of songs on a long commute? It’s so awkward at parties being like “yeah let’s get this party started!” and proceeding to listen to silence for 5 minutes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14185761014",
+            "rating": 1,
+            "created_at": "2026-06-15 14:10:50+00:00"
+          },
+          {
+            "text": "it only sucks if you dont have premium benefits but from my experience this is peak, although there was this song I forgot about that I'll put in later and edit that you guys deleted and im just asking to bring it back because it wasnt rude or anything, it was quite popular and it was my gf favourite song",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_35faa455-0585-412c-9132-1a607d16379b",
+            "rating": 5,
+            "created_at": "2026-06-18 12:26:30+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Disruption Frustration",
+        "summary": "Users hate ads",
+        "cluster_id": 15,
+        "volume": 67,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I hate it you added the adds please I am begging for you to get rid of the adds and I will give a good rating",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14181838212",
+            "rating": 1,
+            "created_at": "2026-06-14 13:53:49+00:00"
+          },
+          {
+            "text": "it is soo bad that I wanna give you ZERO! but it's not possible so I give you a ONE",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_3925b296-6e0a-44b2-a1da-15821e8acc3f",
+            "rating": 1,
+            "created_at": "2026-06-18 16:45:42+00:00"
+          },
+          {
+            "text": "it is soo bad that I wanna give you ZERO! but it's not possible so I give you a ONE",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_3925b296-6e0a-44b2-a1da-15821e8acc3f",
+            "rating": 1,
+            "created_at": "2026-06-18 16:45:42+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Preference Issues",
+        "summary": "Users dislike ads",
+        "cluster_id": 54,
+        "volume": 53,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Great service like premium offers, no adds and free control of music time to time, but the adds could be toned down and the quality of music could be turned up. Sound cloud is honestly the most valuable",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14196340057",
+            "rating": 4,
+            "created_at": "2026-06-18 06:58:22+00:00"
+          },
+          {
+            "text": "I have always loved music and have not been able to play music from my phone because I didn’t have the right app. This app is the best music app I have ever had",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194424627",
+            "rating": 5,
+            "created_at": "2026-06-17 18:20:24+00:00"
+          },
+          {
+            "text": "Great app but the adds or really annoying but would be great with premium amd it says 30 minutes of uninterrupted listening biggest lie ever but great app",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14190927158",
+            "rating": 4,
+            "created_at": "2026-06-16 20:57:19+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Inadequate Search Results",
+        "summary": "Users struggle with search and discovery",
+        "cluster_id": 43,
+        "volume": 51,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Search has always been bad - but as the offering increases, you’re often stuck with the first tranche of results with no concept of page two. Adding information to the search usually just adds bad results rather reordering good ones to the top.\n\nThere’s no real way see information from a long title. Anything too far left is forever invisible. Tables visible on the desktop app aren’t to be found on the mobile app! Why? Then again in the absence of columns sorting and filtering- tables on the desk",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193145192",
+            "rating": 1,
+            "created_at": "2026-06-17 11:57:42+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Heavy Experience",
+        "summary": "Ads hinder music discovery",
+        "cluster_id": 10,
+        "volume": 49,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Originally i would use this app very often but after they decided to become greedy and power hungry ive stopped using it. Music apps like this should not have things like this premium bs. I understand you kind of need it to make money but its way too selfish on Spotify's part because the user is unable to simply pick songs they want to listen too and they have to deal with the same ads repeating constantly and interrupting far too often. People will stop using apps when the apps get too greedy, ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194246948",
+            "rating": 3,
+            "created_at": "2026-06-17 17:25:36+00:00"
+          },
+          {
+            "text": "I love Spotify so much but sometimes I can’t really find my music but I mostly found a lot of music that I like and I like a lot of songs like 578 songs they are my favorite and thank you Spotify. Also, can you maybe get rid of the ads it’s just bugging and I don’t have the money to do it so maybe get rid of a few of the ad maybe please also thank you very much Spotify for making this app for the creators of Spotify. Thank you very much. I appreciate the work and I bet it was very hard making th",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195615620",
+            "rating": 5,
+            "created_at": "2026-06-18 01:39:25+00:00"
+          },
+          {
+            "text": "Title: This app has become terrible! Review: Spotify used to be great, but now it is completely ruined. There are way too many annoying ads. Whenever I search for a specific song, it forces me to listen to a whole playlist instead of that song. On top of that, you can only skip 6 songs in 2 hours! It is incredibly frustrating just trying to listen to one single song. This app seriously needs an urgent update and major improvements, otherwise, it is completely useless. Fix this or close it down!",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_47ad9199-6f52-450f-9205-f2f9628866a0",
+            "rating": 1,
+            "created_at": "2026-06-19 01:43:19+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Overall Satisfaction",
+        "summary": "Users love the app",
+        "cluster_id": 38,
+        "volume": 49,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I have had this app for a couple days now and it has been without fail one of the best apps i have and i just LOVE IT!!! I love travelling to it and it just is so relaxing. 5 stars. You should definitely get it!!",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14194018593",
+            "rating": 5,
+            "created_at": "2026-06-17 16:17:33+00:00"
+          },
+          {
+            "text": "The app is as you always say constantly making changes and improvements. Despite that, the functionality isn't the best yet. I am very honest in my ratings and opinions. You can always do better.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_15695452-e008-4f43-b71d-ae0652eb3c2b",
+            "rating": 3,
+            "created_at": "2026-06-18 21:08:52+00:00"
+          },
+          {
+            "text": "The app is as you always say constantly making changes and improvements. Despite that, the functionality isn't the best yet. I am very honest in my ratings and opinions. You can always do better.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_15695452-e008-4f43-b71d-ae0652eb3c2b",
+            "rating": 3,
+            "created_at": "2026-06-18 21:08:52+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Payment Issues",
+        "summary": "Users struggle with payment failures",
+        "cluster_id": 6,
+        "volume": 45,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "una feel say person dey pluck money from tree bah?? I pay for premium, I was debited on the 2nd of June or so. At just June 15th or there about, una dey talk say payment failed, like una wan debit me again?? I decided to just cancel the subscription. Normally, if you cancel subscription, you'll be able to use it for the rest of the month but noooooo. As I cancelled the subscription, una nor waste time, una jejely kick me out. Make una sufree oh 😠😠",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_7d677ed1-ceff-4081-b5b6-784bb4bace49",
+            "rating": 1,
+            "created_at": "2026-06-18 12:56:00+00:00"
+          },
+          {
+            "text": "una feel say person dey pluck money from tree bah?? I pay for premium, I was debited on the 2nd of June or so. At just June 15th or there about, una dey talk say payment failed, like una wan debit me again?? I decided to just cancel the subscription. Normally, if you cancel subscription, you'll be able to use it for the rest of the month but noooooo. As I cancelled the subscription, una nor waste time, una jejely kick me out. Make una sufree oh 😠😠",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_7d677ed1-ceff-4081-b5b6-784bb4bace49",
+            "rating": 1,
+            "created_at": "2026-06-18 12:56:00+00:00"
+          },
+          {
+            "text": "una feel say person dey pluck money from tree bah?? I pay for premium, I was debited on the 2nd of June or so. At just June 15th or there about, una dey talk say payment failed, like una wan debit me again?? I decided to just cancel the subscription. Normally, if you cancel subscription, you'll be able to use it for the rest of the month but noooooo. As I cancelled the subscription, una nor waste time, una jejely kick me out. Make una sufree oh 😠😠",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_7d677ed1-ceff-4081-b5b6-784bb4bace49",
+            "rating": 1,
+            "created_at": "2026-06-18 12:56:00+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "question_id": 2,
+    "question": "Trust — do users believe recommendations are for them?",
+    "theme_count": 8,
+    "total_volume": 644,
+    "themes": [
+      {
+        "theme_label": "Personalized Content",
+        "summary": "Users love recommended content",
+        "cluster_id": 35,
+        "volume": 254,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I’ve been listening to Southern mysteries for quite some time and decided to go ahead and write a review. It’s been most intriguing. I’ve always wanted to be like a forensic investigator. This series, which is researched by just one person is just mind-boggling. She’s done an amazing job with presenting mysteries and debit in such a way that’s just captivate the audience, well done.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194252995",
+            "rating": 5,
+            "created_at": "2026-06-17 17:27:21+00:00"
+          },
+          {
+            "text": "I love everything about it, but there was just one tiny itty-bitty thing. I don’t really like about it. It’s that whenever you watch a video or a podcast or whatever you want it always freezes and you have to pause it to make it work or you just have to pick a different thing and I don’t really like that but that’s fine. I still love the music.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194617994",
+            "rating": 4,
+            "created_at": "2026-06-17 19:22:59+00:00"
+          },
+          {
+            "text": "I really like the recommendation algorithm. It pushes me towards great music I’d never find otherwise. The amount of new / additional services prominent on the landing page however is annoying and in danger of becoming off putting noise.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193081085",
+            "rating": 4,
+            "created_at": "2026-06-17 11:36:10+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Personal Music Experience",
+        "summary": "Users love Spotify for personal music experiences",
+        "cluster_id": 33,
+        "volume": 117,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Sure, without the dash:\n\nSpotify feels less like a music app and more like a memory box. Every playlist holds a version of me: road trips, evening walks, happy days, heartbreaks, and moments when I simply sat staring at the sky. The best thing about Spotify isn’t the millions of songs; it’s how easily it finds the soundtrack for whatever I’m feeling. Whether I want comfort, excitement, nostalgia, or peace, it’s always there waiting with the right song. ★★★★★",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14157796103",
+            "rating": 5,
+            "created_at": "2026-06-08 10:11:50+00:00"
+          },
+          {
+            "text": "Ok im biased bcs i have spotify plus lmao but i LOVE it i cant live without music and this jst makes it so easy! U can use it for so much other than music aswl lmao and i LOVE how aesthetic it is like come on! I have always been a spotify girl never others bcs i jst prefer ittt, i love how its so easy to make albums and everythingggg deffo recco xxxx 🫰🏽🫰🏽🪽🪽",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14159272692",
+            "rating": 5,
+            "created_at": "2026-06-08 18:09:54+00:00"
+          },
+          {
+            "text": "Been with Spotify since 2007 and have been in love ever since! Only thing that could make it better is if they were able to get all of Garth Brooks music and Garth Brooks is actually singing not a tribute band. Help me out Spotify! Been a loyal customer for 9 years……give me the real Garth Brooks lol",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14197215775",
+            "rating": 5,
+            "created_at": "2026-06-18 12:48:14+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Lack of Relevant Songs",
+        "summary": "Users struggle to find related songs",
+        "cluster_id": 3,
+        "volume": 68,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Overall Satisfaction",
+        "summary": "Users love the app",
+        "cluster_id": 38,
+        "volume": 49,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I have had this app for a couple days now and it has been without fail one of the best apps i have and i just LOVE IT!!! I love travelling to it and it just is so relaxing. 5 stars. You should definitely get it!!",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14194018593",
+            "rating": 5,
+            "created_at": "2026-06-17 16:17:33+00:00"
+          },
+          {
+            "text": "The app is as you always say constantly making changes and improvements. Despite that, the functionality isn't the best yet. I am very honest in my ratings and opinions. You can always do better.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_15695452-e008-4f43-b71d-ae0652eb3c2b",
+            "rating": 3,
+            "created_at": "2026-06-18 21:08:52+00:00"
+          },
+          {
+            "text": "The app is as you always say constantly making changes and improvements. Despite that, the functionality isn't the best yet. I am very honest in my ratings and opinions. You can always do better.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_15695452-e008-4f43-b71d-ae0652eb3c2b",
+            "rating": 3,
+            "created_at": "2026-06-18 21:08:52+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Placement Issues",
+        "summary": "Users hate frequent ads",
+        "cluster_id": 2,
+        "volume": 46,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          },
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          },
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Positive Discovery Experience",
+        "summary": "Users love music recommendations",
+        "cluster_id": 25,
+        "volume": 41,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          },
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          },
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Discovery Satisfaction",
+        "summary": "Users find what they want",
+        "cluster_id": 40,
+        "volume": 38,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "You made full when ever I am empty, thanks for being there..",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14153715165",
+            "rating": 5,
+            "created_at": "2026-06-07 08:09:48+00:00"
+          },
+          {
+            "text": "Very good and all you want are found here..",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_673c5a5f-6404-47ac-8812-25871274faea",
+            "rating": 5,
+            "created_at": "2026-06-18 16:22:50+00:00"
+          },
+          {
+            "text": "Very good and all you want are found here..",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_673c5a5f-6404-47ac-8812-25871274faea",
+            "rating": 5,
+            "created_at": "2026-06-18 16:22:50+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Loyal User Base",
+        "summary": "Users love Spotify",
+        "cluster_id": 42,
+        "volume": 31,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Love it you guys are doing great I nesen to it all the time",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195877999",
+            "rating": 5,
+            "created_at": "2026-06-18 03:25:27+00:00"
+          },
+          {
+            "text": "It’s really good and if u have a subscription its great",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14198457105",
+            "rating": 5,
+            "created_at": "2026-06-18 19:01:11+00:00"
+          },
+          {
+            "text": "Its sooo good..I’m literally speechless 😶 ⭐️☺️😄✨",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14155241519",
+            "rating": 5,
+            "created_at": "2026-06-07 16:48:07+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "question_id": 3,
+    "question": "Effort — how much friction between intent and outcome?",
+    "theme_count": 8,
+    "total_volume": 618,
+    "themes": [
+      {
+        "theme_label": "Limited Music Control",
+        "summary": "Users feel forced to listen",
+        "cluster_id": 31,
+        "volume": 141,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "If you read most of the “5 star reviews” it’s people complaining here’s my not “5 star review”: \nUsed to like using this app, but anymore I hate even looking at it. The “random shuffle” is a lie it plays the same songs over and over constantly and you only get 6 skips after that you don’t have any left so you’re forced to listen to the exact same songs. Just kidding, after every single song there’s 5-6 ads. So you’re not listening to anything at all! Just ads. Constantly. I’ve tracked it if you ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14196284390",
+            "rating": 3,
+            "created_at": "2026-06-18 06:31:59+00:00"
+          },
+          {
+            "text": "[ update ]\n\nFYM I GOTTA PAY TO CHOOSE WHAT I CAN LISTEN TOO?? LIKE OMG HOW AM I GUNNA KNOW WHAT TO PUT IN MY FLAMIN PLAYLIST U GREEDY PLEB\n\nAs soon as I turned on the app it gave me 3 adds right off the bat! Oh and it’s the same 2 adds over and over and over again!\nEven though I turned off the smart shuffle it still adds the most random songs which I have no interest/enjoyment listening to. I’ve recently discovered that if you change your country to somewhere like Japan the premium price becomes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14159377812",
+            "rating": 1,
+            "created_at": "2026-06-08 18:44:30+00:00"
+          },
+          {
+            "text": "This is one of the most horrid apps I’ve ever witnessed. I don’t know what sadist created this but the concept of you being treated like a serf if u don’t pay for premium disgusts me. It’s a music app and you’re just unable to listen to music on phone if ur a third class citizen. 6 skips per HOUR and u only get to CHOOSE what song YOU listen to 6 times. Religious people are stupid for believing there could possibly be a God when this is what’s happening in his supposed garden of Eden. And just l",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14198461326",
+            "rating": 1,
+            "created_at": "2026-06-18 19:02:37+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Overload",
+        "summary": "Users frustrated with excessive ads",
+        "cluster_id": 26,
+        "volume": 93,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Ever since they stopped giving the 30 minutes of music time without ads the free version is unbearable and unusable and it's because they want you to by the premium. i got through 2 2-3 minutes songs before I got 4 ads in a row and it's genuinely working because I can't listen to music when there is only 6-12 minutes of listening time then almost 3 minutes of ads",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_b2ff396d-24ad-425b-b4dc-0768eebb9746",
+            "rating": 1,
+            "created_at": "2026-06-19 02:44:50+00:00"
+          },
+          {
+            "text": "Ever since they stopped giving the 30 minutes of music time without ads the free version is unbearable and unusable and it's because they want you to by the premium. i got through 2 2-3 minutes songs before I got 4 ads in a row and it's genuinely working because I can't listen to music when there is only 6-12 minutes of listening time then almost 3 minutes of ads",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_b2ff396d-24ad-425b-b4dc-0768eebb9746",
+            "rating": 1,
+            "created_at": "2026-06-19 02:44:50+00:00"
+          },
+          {
+            "text": "Ever since they stopped giving the 30 minutes of music time without ads the free version is unbearable and unusable and it's because they want you to by the premium. i got through 2 2-3 minutes songs before I got 4 ads in a row and it's genuinely working because I can't listen to music when there is only 6-12 minutes of listening time then almost 3 minutes of ads",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_b2ff396d-24ad-425b-b4dc-0768eebb9746",
+            "rating": 1,
+            "created_at": "2026-06-19 02:44:50+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Monetization Over Users",
+        "summary": "Users feel Spotify prioritizes money over experience",
+        "cluster_id": 17,
+        "volume": 89,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Don’t know even know where Spotify even began to purge downhill, but it did. Everything is incredibly money grabbing now. Why do I have to get premium to skip songs, queue songs, choose what I want to listen to, AND look at the lyrics. You can AT LEAST let us look at the lyrics, since it was always free up until around two years ago, which, by the way, seems greedy and money-hungry. Getting premium is practically a must at this point, considering you’ve taken away all the freedoms we once had, a",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198594337",
+            "rating": 2,
+            "created_at": "2026-06-18 19:47:37+00:00"
+          },
+          {
+            "text": "This app has continued to disappoint in the last few months. As they’ve added more and more unwanted content… audio books etc. it’s become slower and slower. Its core purpose is to download and listen to music. It’s glitchy now on ‘downloaded’ playlists on different devices and often can’t access downloaded content offline to listen to. It’s also performing poorly on iPad… have recently replaced to new iPad and still the same problems. Family and friends are also all having problems, not all bas",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14163729401",
+            "rating": 2,
+            "created_at": "2026-06-09 21:37:32+00:00"
+          },
+          {
+            "text": "Tbh I wanted to rate it 0 but there’s no option cuz istg this is the most stupidest ever app.. they just wanna make money by shoeing and adds. I literally just changed a song and everytime I do that a add comes up and also the app is really not build for iPads it takes hours to reload and the app works really slow… I’ve been using Spotify since a long time and at the beginning the used to be very nice but now the quality goes way low. Using this app is now a hassle for me.it takes sooo longgggg ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14168862031",
+            "rating": 1,
+            "created_at": "2026-06-11 06:36:41+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Premium Limitations",
+        "summary": "Users struggle with limited features",
+        "cluster_id": 49,
+        "volume": 72,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I love that we can listen to any music that is on there, game soundtracks, audiobooks, podcasts, etc. I also love that we can make several playlists and the app will suggest songs that match the vibe. \n\nHowever, one thing that sometimes gets annoying, is that for people who either can't afford Premium or have something holding them back from getting it, they have a small amount of chances to choose a song they want to listen to right there and then. \n\nI understand that you need a way to get peop",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198320744",
+            "rating": 4,
+            "created_at": "2026-06-18 18:16:20+00:00"
+          },
+          {
+            "text": "It takes 5 minutes to get a song to load with good wifi and even longer to load liked songs. I didn’t have this issue before it updated. What’s the point in paying for premium listening when I’m only able to load a handful of songs on a long commute? It’s so awkward at parties being like “yeah let’s get this party started!” and proceeding to listen to silence for 5 minutes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14185761014",
+            "rating": 1,
+            "created_at": "2026-06-15 14:10:50+00:00"
+          },
+          {
+            "text": "it only sucks if you dont have premium benefits but from my experience this is peak, although there was this song I forgot about that I'll put in later and edit that you guys deleted and im just asking to bring it back because it wasnt rude or anything, it was quite popular and it was my gf favourite song",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_35faa455-0585-412c-9132-1a607d16379b",
+            "rating": 5,
+            "created_at": "2026-06-18 12:26:30+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Disruption Frustration",
+        "summary": "Users hate ads",
+        "cluster_id": 15,
+        "volume": 67,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I hate it you added the adds please I am begging for you to get rid of the adds and I will give a good rating",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14181838212",
+            "rating": 1,
+            "created_at": "2026-06-14 13:53:49+00:00"
+          },
+          {
+            "text": "it is soo bad that I wanna give you ZERO! but it's not possible so I give you a ONE",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_3925b296-6e0a-44b2-a1da-15821e8acc3f",
+            "rating": 1,
+            "created_at": "2026-06-18 16:45:42+00:00"
+          },
+          {
+            "text": "it is soo bad that I wanna give you ZERO! but it's not possible so I give you a ONE",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_3925b296-6e0a-44b2-a1da-15821e8acc3f",
+            "rating": 1,
+            "created_at": "2026-06-18 16:45:42+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Preference Issues",
+        "summary": "Users dislike ads",
+        "cluster_id": 54,
+        "volume": 53,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Great service like premium offers, no adds and free control of music time to time, but the adds could be toned down and the quality of music could be turned up. Sound cloud is honestly the most valuable",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14196340057",
+            "rating": 4,
+            "created_at": "2026-06-18 06:58:22+00:00"
+          },
+          {
+            "text": "I have always loved music and have not been able to play music from my phone because I didn’t have the right app. This app is the best music app I have ever had",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194424627",
+            "rating": 5,
+            "created_at": "2026-06-17 18:20:24+00:00"
+          },
+          {
+            "text": "Great app but the adds or really annoying but would be great with premium amd it says 30 minutes of uninterrupted listening biggest lie ever but great app",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14190927158",
+            "rating": 4,
+            "created_at": "2026-06-16 20:57:19+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Feature Enhancement Requests",
+        "summary": "Users want improved features",
+        "cluster_id": 44,
+        "volume": 52,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "hence the 4 stars instead of 5.  I have used Spotify for several years and it is great. However, it is still missing one feature that users have asked for time and time again on the Spotify community and that is to allow users to save albums into genre folders. There are workarounds apparently that can be done on a desktop but let’s keep it simple for those on the move; subscribing customers wanting be able to save favourite albums in folders as genres. I would like a go to place where I can pic",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14168883201",
+            "rating": 4,
+            "created_at": "2026-06-11 06:46:47+00:00"
+          },
+          {
+            "text": "This app is honestly the best app for music there is! With access to albums, singles, all different types of music, it’s perfect! I use Spotify every day as it is an app that has so many features from making playlists to music listening stats to even mini snake games with music! We of course cannot forget about the podcasts included on Spotify! There are so many fun podcasts and a perfect one for any interest. I cannot say anything bad about this app unless you count how addictive I am to it!! P",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195463397",
+            "rating": 5,
+            "created_at": "2026-06-18 00:39:15+00:00"
+          },
+          {
+            "text": "I love this app you can play whatever music u want and it’s really good  quality u can make playlists as well where I can put ur favourite songs on the only thing they could improve on is maybe they could make it easier to make playlists because when u tap on a singer and then wanna add all their songs when u tap on one of then it comes up with tons of recommendations that I don’t want so it would definitely help to take away the recommendations",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14182055998",
+            "rating": 5,
+            "created_at": "2026-06-14 14:58:38+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Inadequate Search Results",
+        "summary": "Users struggle with search and discovery",
+        "cluster_id": 43,
+        "volume": 51,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Search has always been bad - but as the offering increases, you’re often stuck with the first tranche of results with no concept of page two. Adding information to the search usually just adds bad results rather reordering good ones to the top.\n\nThere’s no real way see information from a long title. Anything too far left is forever invisible. Tables visible on the desktop app aren’t to be found on the mobile app! Why? Then again in the absence of columns sorting and filtering- tables on the desk",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193145192",
+            "rating": 1,
+            "created_at": "2026-06-17 11:57:42+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "question_id": 4,
+    "question": "Relevance — too safe, too random, or stuck in a loop?",
+    "theme_count": 8,
+    "total_volume": 680,
+    "themes": [
+      {
+        "theme_label": "Personalized Content",
+        "summary": "Users love recommended content",
+        "cluster_id": 35,
+        "volume": 254,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I’ve been listening to Southern mysteries for quite some time and decided to go ahead and write a review. It’s been most intriguing. I’ve always wanted to be like a forensic investigator. This series, which is researched by just one person is just mind-boggling. She’s done an amazing job with presenting mysteries and debit in such a way that’s just captivate the audience, well done.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194252995",
+            "rating": 5,
+            "created_at": "2026-06-17 17:27:21+00:00"
+          },
+          {
+            "text": "I love everything about it, but there was just one tiny itty-bitty thing. I don’t really like about it. It’s that whenever you watch a video or a podcast or whatever you want it always freezes and you have to pause it to make it work or you just have to pick a different thing and I don’t really like that but that’s fine. I still love the music.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194617994",
+            "rating": 4,
+            "created_at": "2026-06-17 19:22:59+00:00"
+          },
+          {
+            "text": "I really like the recommendation algorithm. It pushes me towards great music I’d never find otherwise. The amount of new / additional services prominent on the landing page however is annoying and in danger of becoming off putting noise.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193081085",
+            "rating": 4,
+            "created_at": "2026-06-17 11:36:10+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Limited Music Control",
+        "summary": "Users feel forced to listen",
+        "cluster_id": 31,
+        "volume": 141,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "If you read most of the “5 star reviews” it’s people complaining here’s my not “5 star review”: \nUsed to like using this app, but anymore I hate even looking at it. The “random shuffle” is a lie it plays the same songs over and over constantly and you only get 6 skips after that you don’t have any left so you’re forced to listen to the exact same songs. Just kidding, after every single song there’s 5-6 ads. So you’re not listening to anything at all! Just ads. Constantly. I’ve tracked it if you ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14196284390",
+            "rating": 3,
+            "created_at": "2026-06-18 06:31:59+00:00"
+          },
+          {
+            "text": "[ update ]\n\nFYM I GOTTA PAY TO CHOOSE WHAT I CAN LISTEN TOO?? LIKE OMG HOW AM I GUNNA KNOW WHAT TO PUT IN MY FLAMIN PLAYLIST U GREEDY PLEB\n\nAs soon as I turned on the app it gave me 3 adds right off the bat! Oh and it’s the same 2 adds over and over and over again!\nEven though I turned off the smart shuffle it still adds the most random songs which I have no interest/enjoyment listening to. I’ve recently discovered that if you change your country to somewhere like Japan the premium price becomes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14159377812",
+            "rating": 1,
+            "created_at": "2026-06-08 18:44:30+00:00"
+          },
+          {
+            "text": "This is one of the most horrid apps I’ve ever witnessed. I don’t know what sadist created this but the concept of you being treated like a serf if u don’t pay for premium disgusts me. It’s a music app and you’re just unable to listen to music on phone if ur a third class citizen. 6 skips per HOUR and u only get to CHOOSE what song YOU listen to 6 times. Religious people are stupid for believing there could possibly be a God when this is what’s happening in his supposed garden of Eden. And just l",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14198461326",
+            "rating": 1,
+            "created_at": "2026-06-18 19:02:37+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Lack of Relevant Songs",
+        "summary": "Users struggle to find related songs",
+        "cluster_id": 3,
+        "volume": 68,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Feature Enhancement Requests",
+        "summary": "Users want improved features",
+        "cluster_id": 44,
+        "volume": 52,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "hence the 4 stars instead of 5.  I have used Spotify for several years and it is great. However, it is still missing one feature that users have asked for time and time again on the Spotify community and that is to allow users to save albums into genre folders. There are workarounds apparently that can be done on a desktop but let’s keep it simple for those on the move; subscribing customers wanting be able to save favourite albums in folders as genres. I would like a go to place where I can pic",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14168883201",
+            "rating": 4,
+            "created_at": "2026-06-11 06:46:47+00:00"
+          },
+          {
+            "text": "This app is honestly the best app for music there is! With access to albums, singles, all different types of music, it’s perfect! I use Spotify every day as it is an app that has so many features from making playlists to music listening stats to even mini snake games with music! We of course cannot forget about the podcasts included on Spotify! There are so many fun podcasts and a perfect one for any interest. I cannot say anything bad about this app unless you count how addictive I am to it!! P",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195463397",
+            "rating": 5,
+            "created_at": "2026-06-18 00:39:15+00:00"
+          },
+          {
+            "text": "I love this app you can play whatever music u want and it’s really good  quality u can make playlists as well where I can put ur favourite songs on the only thing they could improve on is maybe they could make it easier to make playlists because when u tap on a singer and then wanna add all their songs when u tap on one of then it comes up with tons of recommendations that I don’t want so it would definitely help to take away the recommendations",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14182055998",
+            "rating": 5,
+            "created_at": "2026-06-14 14:58:38+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Inadequate Search Results",
+        "summary": "Users struggle with search and discovery",
+        "cluster_id": 43,
+        "volume": 51,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Search has always been bad - but as the offering increases, you’re often stuck with the first tranche of results with no concept of page two. Adding information to the search usually just adds bad results rather reordering good ones to the top.\n\nThere’s no real way see information from a long title. Anything too far left is forever invisible. Tables visible on the desktop app aren’t to be found on the mobile app! Why? Then again in the absence of columns sorting and filtering- tables on the desk",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193145192",
+            "rating": 1,
+            "created_at": "2026-06-17 11:57:42+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          },
+          {
+            "text": "can't add songs to my liked playlist. also there is no way to explore new music. homepage is full of AI made playlists and recommendations but they are all based on my history and liked songs. I want to Listen something new but there is no way unless I know a few songs myself. no novelty.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_89f25df1-6b24-4ee0-867e-6e265da25f37",
+            "rating": 2,
+            "created_at": "2026-06-18 21:05:18+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Positive Discovery Experience",
+        "summary": "Users love music recommendations",
+        "cluster_id": 25,
+        "volume": 41,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          },
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          },
+          {
+            "text": "I love the vibe I am getting from the help",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_58c4e063-38dd-437f-8770-fdbe75c0e83e",
+            "rating": 4,
+            "created_at": "2026-06-18 23:53:51+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Discovery Satisfaction",
+        "summary": "Users find what they want",
+        "cluster_id": 40,
+        "volume": 38,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "You made full when ever I am empty, thanks for being there..",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14153715165",
+            "rating": 5,
+            "created_at": "2026-06-07 08:09:48+00:00"
+          },
+          {
+            "text": "Very good and all you want are found here..",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_673c5a5f-6404-47ac-8812-25871274faea",
+            "rating": 5,
+            "created_at": "2026-06-18 16:22:50+00:00"
+          },
+          {
+            "text": "Very good and all you want are found here..",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_673c5a5f-6404-47ac-8812-25871274faea",
+            "rating": 5,
+            "created_at": "2026-06-18 16:22:50+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Shuffle Algorithm Issues",
+        "summary": "Users dislike shuffle algorithm",
+        "cluster_id": 18,
+        "volume": 35,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Look I understand the hype for Spotify. I love it myself, but I don't use it often for reasons I wanna list simply. First one is why do I need premium just to loop a song, rewind a song all that? I feel like that should be for everyone considering all other Music apps allows that to everyone without paying. Second thing is why do y'all randomly shuffle music? Like when I choose a song it plays something completely different. It's stuck on shuffle, because again we have to pay to not feel too \"li",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195365558",
+            "rating": 3,
+            "created_at": "2026-06-18 00:00:13+00:00"
+          },
+          {
+            "text": "Spotify I have a question for you. Why do you think I make my own playlist? \n\nTo play my OWN songs. So why are you giving me over 10 recommendations in a row when my playlist isn’t even finished. If I wanted recommendations I would play a bloody playlist by Spotify. But I DON’T want your stupid recommendations when the music you recommend isn’t even to my liking. I use Spotify free so I have to use all my skips on your stupid recommendations. I am getting really frustrated because I don’t want t",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193900126",
+            "rating": 1,
+            "created_at": "2026-06-17 15:42:30+00:00"
+          },
+          {
+            "text": "As a Spotify premium user, I don't have much to complain about. But, the one thing that made me rate this 2-stars (hopefully, y'all need to take such feedback very seriously) is the \"shuffle\" algorithm. It is VERY DISAPPOINTING! I left Spotify for almost 2 years and recently decided to go back to it and this made me remember why I left the app. Having 206 songs in a playlist and Spotify \"shuffle-play\" decides, that playing the same 23 songs is a good thing ??😤 Y'ALL NEED TO DO BETTER!",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_e9d4e4fd-8e60-494c-b7b2-7cb1f1c27d31",
+            "rating": 2,
+            "created_at": "2026-06-18 14:37:21+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "question_id": 5,
+    "question": "Context — do recommendations fit the moment?",
+    "theme_count": 5,
+    "total_volume": 508,
+    "themes": [
+      {
+        "theme_label": "Personalized Content",
+        "summary": "Users love recommended content",
+        "cluster_id": 35,
+        "volume": 254,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I’ve been listening to Southern mysteries for quite some time and decided to go ahead and write a review. It’s been most intriguing. I’ve always wanted to be like a forensic investigator. This series, which is researched by just one person is just mind-boggling. She’s done an amazing job with presenting mysteries and debit in such a way that’s just captivate the audience, well done.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194252995",
+            "rating": 5,
+            "created_at": "2026-06-17 17:27:21+00:00"
+          },
+          {
+            "text": "I love everything about it, but there was just one tiny itty-bitty thing. I don’t really like about it. It’s that whenever you watch a video or a podcast or whatever you want it always freezes and you have to pause it to make it work or you just have to pick a different thing and I don’t really like that but that’s fine. I still love the music.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194617994",
+            "rating": 4,
+            "created_at": "2026-06-17 19:22:59+00:00"
+          },
+          {
+            "text": "I really like the recommendation algorithm. It pushes me towards great music I’d never find otherwise. The amount of new / additional services prominent on the landing page however is annoying and in danger of becoming off putting noise.",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193081085",
+            "rating": 4,
+            "created_at": "2026-06-17 11:36:10+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Personal Music Experience",
+        "summary": "Users love Spotify for personal music experiences",
+        "cluster_id": 33,
+        "volume": 117,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Sure, without the dash:\n\nSpotify feels less like a music app and more like a memory box. Every playlist holds a version of me: road trips, evening walks, happy days, heartbreaks, and moments when I simply sat staring at the sky. The best thing about Spotify isn’t the millions of songs; it’s how easily it finds the soundtrack for whatever I’m feeling. Whether I want comfort, excitement, nostalgia, or peace, it’s always there waiting with the right song. ★★★★★",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14157796103",
+            "rating": 5,
+            "created_at": "2026-06-08 10:11:50+00:00"
+          },
+          {
+            "text": "Ok im biased bcs i have spotify plus lmao but i LOVE it i cant live without music and this jst makes it so easy! U can use it for so much other than music aswl lmao and i LOVE how aesthetic it is like come on! I have always been a spotify girl never others bcs i jst prefer ittt, i love how its so easy to make albums and everythingggg deffo recco xxxx 🫰🏽🫰🏽🪽🪽",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14159272692",
+            "rating": 5,
+            "created_at": "2026-06-08 18:09:54+00:00"
+          },
+          {
+            "text": "Been with Spotify since 2007 and have been in love ever since! Only thing that could make it better is if they were able to get all of Garth Brooks music and Garth Brooks is actually singing not a tribute band. Help me out Spotify! Been a loyal customer for 9 years……give me the real Garth Brooks lol",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14197215775",
+            "rating": 5,
+            "created_at": "2026-06-18 12:48:14+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Lack of Relevant Songs",
+        "summary": "Users struggle to find related songs",
+        "cluster_id": 3,
+        "volume": 68,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          },
+          {
+            "text": "when I lisen hanuman ji song single song after no one song available continue to hanuman bhajan amend it then we will give 5 star.",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_f882c5ec-bd13-4b76-8f05-8fee3bb17e65",
+            "rating": 2,
+            "created_at": "2026-06-18 15:22:45+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Placement Issues",
+        "summary": "Users hate frequent ads",
+        "cluster_id": 2,
+        "volume": 46,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          },
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          },
+          {
+            "text": "2026-06: o novo widget é péssimo, demora horrores pra carregar O premium do Spotify é apresentado com muita má fé, prometendo experiência sem anúncios, mas incluindo anúncios em podcasts (com a \"justificativa\" que o premium trata apenas de _músicas_ sem anúncios. Ora, qual o impeditivo em estruturar um premium totalmente livre de anúncios?)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_ee5f9ce1-3626-4f9b-992d-2ed8246af8fd",
+            "rating": 1,
+            "created_at": "2026-06-18 17:24:53+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Positive User Experience",
+        "summary": "Users love Spotify",
+        "cluster_id": 24,
+        "volume": 23,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Would recommend 100% has changed my life fir the better",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14191106115",
+            "rating": 5,
+            "created_at": "2026-06-16 22:00:18+00:00"
+          },
+          {
+            "text": "this app is so useful when you are playing game",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_d1c3bc10-68a4-4636-93b5-342683e68ed9",
+            "rating": 5,
+            "created_at": "2026-06-18 20:00:33+00:00"
+          },
+          {
+            "text": "this app is so useful when you are playing game",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_d1c3bc10-68a4-4636-93b5-342683e68ed9",
+            "rating": 5,
+            "created_at": "2026-06-18 20:00:33+00:00"
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "question_id": 6,
+    "question": "Agency — can users steer/correct discovery?",
+    "theme_count": 8,
+    "total_volume": 474,
+    "themes": [
+      {
+        "theme_label": "Limited Music Control",
+        "summary": "Users feel forced to listen",
+        "cluster_id": 31,
+        "volume": 141,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "If you read most of the “5 star reviews” it’s people complaining here’s my not “5 star review”: \nUsed to like using this app, but anymore I hate even looking at it. The “random shuffle” is a lie it plays the same songs over and over constantly and you only get 6 skips after that you don’t have any left so you’re forced to listen to the exact same songs. Just kidding, after every single song there’s 5-6 ads. So you’re not listening to anything at all! Just ads. Constantly. I’ve tracked it if you ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14196284390",
+            "rating": 3,
+            "created_at": "2026-06-18 06:31:59+00:00"
+          },
+          {
+            "text": "[ update ]\n\nFYM I GOTTA PAY TO CHOOSE WHAT I CAN LISTEN TOO?? LIKE OMG HOW AM I GUNNA KNOW WHAT TO PUT IN MY FLAMIN PLAYLIST U GREEDY PLEB\n\nAs soon as I turned on the app it gave me 3 adds right off the bat! Oh and it’s the same 2 adds over and over and over again!\nEven though I turned off the smart shuffle it still adds the most random songs which I have no interest/enjoyment listening to. I’ve recently discovered that if you change your country to somewhere like Japan the premium price becomes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14159377812",
+            "rating": 1,
+            "created_at": "2026-06-08 18:44:30+00:00"
+          },
+          {
+            "text": "This is one of the most horrid apps I’ve ever witnessed. I don’t know what sadist created this but the concept of you being treated like a serf if u don’t pay for premium disgusts me. It’s a music app and you’re just unable to listen to music on phone if ur a third class citizen. 6 skips per HOUR and u only get to CHOOSE what song YOU listen to 6 times. Religious people are stupid for believing there could possibly be a God when this is what’s happening in his supposed garden of Eden. And just l",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14198461326",
+            "rating": 1,
+            "created_at": "2026-06-18 19:02:37+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Monetization Over Users",
+        "summary": "Users feel Spotify prioritizes money over experience",
+        "cluster_id": 17,
+        "volume": 89,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Don’t know even know where Spotify even began to purge downhill, but it did. Everything is incredibly money grabbing now. Why do I have to get premium to skip songs, queue songs, choose what I want to listen to, AND look at the lyrics. You can AT LEAST let us look at the lyrics, since it was always free up until around two years ago, which, by the way, seems greedy and money-hungry. Getting premium is practically a must at this point, considering you’ve taken away all the freedoms we once had, a",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198594337",
+            "rating": 2,
+            "created_at": "2026-06-18 19:47:37+00:00"
+          },
+          {
+            "text": "This app has continued to disappoint in the last few months. As they’ve added more and more unwanted content… audio books etc. it’s become slower and slower. Its core purpose is to download and listen to music. It’s glitchy now on ‘downloaded’ playlists on different devices and often can’t access downloaded content offline to listen to. It’s also performing poorly on iPad… have recently replaced to new iPad and still the same problems. Family and friends are also all having problems, not all bas",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14163729401",
+            "rating": 2,
+            "created_at": "2026-06-09 21:37:32+00:00"
+          },
+          {
+            "text": "Tbh I wanted to rate it 0 but there’s no option cuz istg this is the most stupidest ever app.. they just wanna make money by shoeing and adds. I literally just changed a song and everytime I do that a add comes up and also the app is really not build for iPads it takes hours to reload and the app works really slow… I’ve been using Spotify since a long time and at the beginning the used to be very nice but now the quality goes way low. Using this app is now a hassle for me.it takes sooo longgggg ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14168862031",
+            "rating": 1,
+            "created_at": "2026-06-11 06:36:41+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Premium Limitations",
+        "summary": "Users struggle with limited features",
+        "cluster_id": 49,
+        "volume": 72,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "I love that we can listen to any music that is on there, game soundtracks, audiobooks, podcasts, etc. I also love that we can make several playlists and the app will suggest songs that match the vibe. \n\nHowever, one thing that sometimes gets annoying, is that for people who either can't afford Premium or have something holding them back from getting it, they have a small amount of chances to choose a song they want to listen to right there and then. \n\nI understand that you need a way to get peop",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14198320744",
+            "rating": 4,
+            "created_at": "2026-06-18 18:16:20+00:00"
+          },
+          {
+            "text": "It takes 5 minutes to get a song to load with good wifi and even longer to load liked songs. I didn’t have this issue before it updated. What’s the point in paying for premium listening when I’m only able to load a handful of songs on a long commute? It’s so awkward at parties being like “yeah let’s get this party started!” and proceeding to listen to silence for 5 minutes",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14185761014",
+            "rating": 1,
+            "created_at": "2026-06-15 14:10:50+00:00"
+          },
+          {
+            "text": "it only sucks if you dont have premium benefits but from my experience this is peak, although there was this song I forgot about that I'll put in later and edit that you guys deleted and im just asking to bring it back because it wasnt rude or anything, it was quite popular and it was my gf favourite song",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_35faa455-0585-412c-9132-1a607d16379b",
+            "rating": 5,
+            "created_at": "2026-06-18 12:26:30+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Ad Heavy Experience",
+        "summary": "Ads hinder music discovery",
+        "cluster_id": 10,
+        "volume": 49,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Originally i would use this app very often but after they decided to become greedy and power hungry ive stopped using it. Music apps like this should not have things like this premium bs. I understand you kind of need it to make money but its way too selfish on Spotify's part because the user is unable to simply pick songs they want to listen too and they have to deal with the same ads repeating constantly and interrupting far too often. People will stop using apps when the apps get too greedy, ",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14194246948",
+            "rating": 3,
+            "created_at": "2026-06-17 17:25:36+00:00"
+          },
+          {
+            "text": "I love Spotify so much but sometimes I can’t really find my music but I mostly found a lot of music that I like and I like a lot of songs like 578 songs they are my favorite and thank you Spotify. Also, can you maybe get rid of the ads it’s just bugging and I don’t have the money to do it so maybe get rid of a few of the ad maybe please also thank you very much Spotify for making this app for the creators of Spotify. Thank you very much. I appreciate the work and I bet it was very hard making th",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195615620",
+            "rating": 5,
+            "created_at": "2026-06-18 01:39:25+00:00"
+          },
+          {
+            "text": "Title: This app has become terrible! Review: Spotify used to be great, but now it is completely ruined. There are way too many annoying ads. Whenever I search for a specific song, it forces me to listen to a whole playlist instead of that song. On top of that, you can only skip 6 songs in 2 hours! It is incredibly frustrating just trying to listen to one single song. This app seriously needs an urgent update and major improvements, otherwise, it is completely useless. Fix this or close it down!",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_47ad9199-6f52-450f-9205-f2f9628866a0",
+            "rating": 1,
+            "created_at": "2026-06-19 01:43:19+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Shuffle Algorithm Issues",
+        "summary": "Users dislike shuffle algorithm",
+        "cluster_id": 18,
+        "volume": 35,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Look I understand the hype for Spotify. I love it myself, but I don't use it often for reasons I wanna list simply. First one is why do I need premium just to loop a song, rewind a song all that? I feel like that should be for everyone considering all other Music apps allows that to everyone without paying. Second thing is why do y'all randomly shuffle music? Like when I choose a song it plays something completely different. It's stuck on shuffle, because again we have to pay to not feel too \"li",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195365558",
+            "rating": 3,
+            "created_at": "2026-06-18 00:00:13+00:00"
+          },
+          {
+            "text": "Spotify I have a question for you. Why do you think I make my own playlist? \n\nTo play my OWN songs. So why are you giving me over 10 recommendations in a row when my playlist isn’t even finished. If I wanted recommendations I would play a bloody playlist by Spotify. But I DON’T want your stupid recommendations when the music you recommend isn’t even to my liking. I use Spotify free so I have to use all my skips on your stupid recommendations. I am getting really frustrated because I don’t want t",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14193900126",
+            "rating": 1,
+            "created_at": "2026-06-17 15:42:30+00:00"
+          },
+          {
+            "text": "As a Spotify premium user, I don't have much to complain about. But, the one thing that made me rate this 2-stars (hopefully, y'all need to take such feedback very seriously) is the \"shuffle\" algorithm. It is VERY DISAPPOINTING! I left Spotify for almost 2 years and recently decided to go back to it and this made me remember why I left the app. Having 206 songs in a playlist and Spotify \"shuffle-play\" decides, that playing the same 23 songs is a good thing ??😤 Y'ALL NEED TO DO BETTER!",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=gb_e9d4e4fd-8e60-494c-b7b2-7cb1f1c27d31",
+            "rating": 2,
+            "created_at": "2026-06-18 14:37:21+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Satisfied Users",
+        "summary": "Users love Spotify",
+        "cluster_id": 41,
+        "volume": 30,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Love it, does exactly what I need it to! 💯",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14166482075",
+            "rating": 5,
+            "created_at": "2026-06-10 15:33:30+00:00"
+          },
+          {
+            "text": "this is my world. love it so much :)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=us_fe954ed7-093d-4865-9f2e-243c5dee2855",
+            "rating": 5,
+            "created_at": "2026-06-19 00:48:16+00:00"
+          },
+          {
+            "text": "this is my world. love it so much :)",
+            "source": "play_store",
+            "source_url": "https://play.google.com/store/apps/details?id=com.spotify.music&reviewId=in_fe954ed7-093d-4865-9f2e-243c5dee2855",
+            "rating": 5,
+            "created_at": "2026-06-19 00:48:16+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Cross Platform Issues",
+        "summary": "Users report platform-specific problems",
+        "cluster_id": 34,
+        "volume": 29,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "It shows like it is being downloaded in apple , half downloaded and half being, confusing people, isn’t it ????",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14153070850",
+            "rating": 1,
+            "created_at": "2026-06-07 03:27:09+00:00"
+          },
+          {
+            "text": "Slow and annoying doesn’t load really debating moving to a different app",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14169317908",
+            "rating": 1,
+            "created_at": "2026-06-11 10:05:40+00:00"
+          },
+          {
+            "text": "but there is an problem it has more mb download in iphone then android",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14187961048",
+            "rating": 5,
+            "created_at": "2026-06-16 02:43:55+00:00"
+          }
+        ]
+      },
+      {
+        "theme_label": "Positive Experience",
+        "summary": "Users love Spotify",
+        "cluster_id": 39,
+        "volume": 29,
+        "confidence": "medium",
+        "quotes": [
+          {
+            "text": "Freedom every one should try to achieve it",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/us/app/spotify/id14195916754",
+            "rating": 5,
+            "created_at": "2026-06-18 03:42:12+00:00"
+          },
+          {
+            "text": "Brilliant would recommend 10/10,",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/gb/app/spotify/id14170111775",
+            "rating": 5,
+            "created_at": "2026-06-11 14:28:23+00:00"
+          },
+          {
+            "text": "Best decision in my life ❤️",
+            "source": "app_store",
+            "source_url": "https://apps.apple.com/in/app/spotify/id14180472195",
+            "rating": 5,
+            "created_at": "2026-06-14 04:54:50+00:00"
+          }
+        ]
+      }
+    ]
+  }
+}
