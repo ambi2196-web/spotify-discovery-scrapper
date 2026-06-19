@@ -1,0 +1,43 @@
+# What to fetch and how to process it. Secrets live in .env, not here.
+
+window_days: 90              # only collect items newer than this
+
+sources:
+  app_store:
+    enabled: true
+    app_id: "324684580"      # Spotify on iOS App Store
+    countries: ["us", "gb", "in"]
+    max_per_country: 500
+
+  play_store:
+    enabled: true
+    app_id: "com.spotify.music"
+    lang: "en"
+    countries: ["us", "gb", "in"]
+    max_per_country: 500
+
+  reddit:
+    enabled: true
+    subreddits: ["spotify", "truespotify", "Music"]
+    queries: ["discover", "recommendation", "new music", "discover weekly", "algorithm"]
+    max_per_query: 300
+
+  # Pluggable, not built in Phase 0:
+  spotify_forum:
+    enabled: false
+  social:
+    enabled: false
+
+embedding:
+  provider: "local"          # local | openai
+  model: "all-MiniLM-L6-v2"
+
+clustering:
+  algorithm: "hdbscan"       # hdbscan | kmeans
+  min_cluster_size: 15
+  use_umap: true
+
+labeling:
+  provider: "anthropic"      # anthropic | openai
+  model: "claude-haiku-4-5"
+  max_quotes_per_cluster: 5
