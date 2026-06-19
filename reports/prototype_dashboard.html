@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Discovery Diagnosis · Scrapper Pipeline</title>
+<style>
+  :root {
+    --green: #1DB954;
+    --green-dark: #158a3e;
+    --black: #121212;
+    --dark: #181818;
+    --mid: #282828;
+    --surface: #1e1e1e;
+    --text: #FFFFFF;
+    --text-muted: #B3B3B3;
+    --text-dim: #6a6a6a;
+    --warn: #f59e0b;
+    --trust: #3b82f6;
+    --effort: #ef4444;
+    --relevance: #8b5cf6;
+    --context: #06b6d4;
+    --agency: #f97316;
+    --awareness: #10b981;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif; background: var(--black); color: var(--text); min-height: 100vh; }
+
+  /* Header */
+  .header { background: var(--dark); border-bottom: 1px solid #2a2a2a; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo svg { width: 28px; height: 28px; }
+  .logo-text { font-size: 18px; font-weight: 700; }
+  .logo-text span { color: var(--green); }
+  .badge { background: var(--green); color: #000; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.5px; }
+  .header-meta { text-align: right; color: var(--text-muted); font-size: 13px; }
+
+  /* Layout */
+  .layout { display: grid; grid-template-columns: 240px 1fr; min-height: calc(100vh - 73px); }
+
+  /* Sidebar */
+  .sidebar { background: var(--dark); border-right: 1px solid #2a2a2a; padding: 24px 0; position: sticky; top: 73px; height: calc(100vh - 73px); overflow-y: auto; }
+  .sidebar-section { padding: 0 16px 16px; }
+  .sidebar-title { font-size: 11px; font-weight: 700; color: var(--text-dim); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; padding: 0 8px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 6px; cursor: pointer; transition: all 0.15s; font-size: 14px; color: var(--text-muted); margin-bottom: 2px; }
+  .nav-item:hover { background: var(--mid); color: var(--text); }
+  .nav-item.active { background: var(--mid); color: var(--text); }
+  .nav-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .nav-count { margin-left: auto; font-size: 12px; background: #333; padding: 2px 7px; border-radius: 10px; }
+
+  /* Stats bar */
+  .stats-bar { display: flex; gap: 0; background: var(--mid); border-bottom: 1px solid #333; }
+  .stat { flex: 1; padding: 20px 24px; text-align: center; border-right: 1px solid #333; }
+  .stat:last-child { border-right: none; }
+  .stat-value { font-size: 28px; font-weight: 800; color: var(--green); }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Main content */
+  .main { padding: 32px; overflow-y: auto; }
+  .section-header { margin-bottom: 32px; }
+  .section-header h1 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
+  .section-header p { color: var(--text-muted); font-size: 14px; }
+
+  /* Question view */
+  .question-view { display: none; }
+  .question-view.active { display: block; }
+
+  .q-header { background: var(--mid); border-radius: 12px; padding: 24px; margin-bottom: 24px; border-left: 4px solid var(--green); }
+  .q-number { font-size: 12px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .q-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .q-meta { display: flex; gap: 20px; font-size: 13px; color: var(--text-muted); }
+  .q-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* Volume bar */
+  .volume-chart { background: var(--mid); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; }
+  .volume-chart h3 { font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+  .bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .bar-label { font-size: 13px; color: var(--text); width: 200px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { flex: 1; height: 8px; background: #333; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; background: var(--green); transition: width 0.5s ease; }
+  .bar-count { font-size: 12px; color: var(--text-muted); width: 40px; text-align: right; flex-shrink: 0; }
+
+  /* Theme cards */
+  .themes-grid { display: grid; gap: 16px; }
+  .theme-card { background: var(--mid); border-radius: 12px; overflow: hidden; }
+  .theme-head { padding: 16px 20px; display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; }
+  .theme-head:hover { background: #2e2e2e; }
+  .theme-label { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .theme-summary { font-size: 13px; color: var(--text-muted); }
+  .theme-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; margin-left: 16px; }
+  .badge-vol { font-size: 12px; background: #333; color: var(--text-muted); padding: 4px 10px; border-radius: 10px; white-space: nowrap; }
+  .badge-conf { font-size: 11px; padding: 3px 8px; border-radius: 8px; font-weight: 600; }
+  .badge-conf.high { background: rgba(29,185,84,0.2); color: var(--green); }
+  .badge-conf.medium { background: rgba(245,158,11,0.2); color: var(--warn); }
+  .badge-conf.low { background: rgba(107,114,128,0.2); color: #9ca3af; }
+  .expand-icon { color: var(--text-dim); transition: transform 0.2s; margin-top: 2px; }
+  .theme-body { display: none; padding: 0 20px 20px; border-top: 1px solid #333; }
+  .theme-body.open { display: block; }
+  .quotes { margin-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .quote-card { background: var(--surface); border-radius: 8px; padding: 14px 16px; border-left: 3px solid #444; }
+  .quote-text { font-size: 14px; line-height: 1.6; color: var(--text); font-style: italic; margin-bottom: 8px; }
+  .quote-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+  .source-badge { display: inline-flex; align-items: center; gap: 5px; background: #333; padding: 3px 9px; border-radius: 10px; }
+  .rating-stars { color: var(--green); }
+  .quote-link { color: var(--green); text-decoration: none; font-size: 11px; }
+  .quote-link:hover { text-decoration: underline; }
+
+  /* Overview */
+  .overview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+  .ov-card { background: var(--mid); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.15s; border: 2px solid transparent; }
+  .ov-card:hover { border-color: var(--green); background: #2a2a2a; }
+  .ov-qnum { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .ov-qtitle { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+  .ov-themes { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+  .ov-bar { height: 4px; background: #333; border-radius: 2px; overflow: hidden; }
+  .ov-fill { height: 100%; border-radius: 2px; }
+  .signal-label { font-size: 11px; font-weight: 600; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Pipeline info */
+  .pipeline-steps { display: flex; gap: 0; background: var(--mid); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+  .pipe-step { flex: 1; padding: 16px 12px; text-align: center; border-right: 1px solid #333; position: relative; }
+  .pipe-step:last-child { border-right: none; }
+  .pipe-step.done { background: rgba(29,185,84,0.05); }
+  .pipe-num { font-size: 10px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .pipe-name { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+  .pipe-desc { font-size: 11px; color: var(--text-muted); }
+  .pipe-check { position: absolute; top: 12px; right: 12px; color: var(--green); font-size: 14px; }
+
+  /* Footer */
+  .footer { padding: 16px 32px; background: var(--dark); border-top: 1px solid #2a2a2a; font-size: 12px; color: var(--text-dim); text-align: center; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .overview-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="#1DB954" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#1DB954"/>
+      <path d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6-.15-.5.15-1 .6-1.15 3.55-1.05 9.4-.85 13.1 1.35.45.25.6.85.35 1.3-.25.35-.85.5-1.3.25zm-.1 2.8c-.25.35-.7.5-1.05.25-2.7-1.65-6.8-2.15-9.95-1.15-.4.1-.85-.1-.95-.5-.1-.4.1-.85.5-.95 3.65-1.1 8.15-.55 11.25 1.35.3.15.45.65.2 1zm-1.2 2.75c-.2.3-.55.4-.85.2-2.35-1.45-5.3-1.75-8.8-.95-.35.1-.65-.15-.75-.45-.1-.35.15-.65.45-.75 3.8-.85 7.1-.5 9.7 1.1.35.15.4.55.25.85z" fill="#000"/>
+    </svg>
+    <div>
+      <div class="logo-text">Scrapper <span>Pipeline</span></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span class="badge">PHASE 1 · PROTOTYPE</span>
+  </div>
+  <div class="header-meta">
+    <div style="font-weight:600;color:#fff">Spotify Discovery Diagnosis</div>
+    <div>PM Fellowship · Growth Case Study</div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Overview</div>
+      <div class="nav-item active" onclick="showView('overview')" id="nav-overview">
+        <span style="font-size:16px">📊</span> All Questions
+      </div>
+      <div class="nav-item" onclick="showView('pipeline')" id="nav-pipeline">
+        <span style="font-size:16px">⚙️</span> Pipeline Info
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">6 Diagnostic Questions</div>
+      <div class="nav-item" onclick="showView('q1')" id="nav-q1">
+        <span class="nav-dot" style="background:var(--awareness)"></span>
+        Awareness
+        <span class="nav-count">3</span>
+      </div>
+      <div class="nav-item" onclick="showView('q2')" id="nav-q2">
+        <span class="nav-dot" style="background:var(--trust)"></span>
+        Trust
+        <span class="nav-count">4</span>
+      </div>
+      <div class="nav-item" onclick="showView('q3')" id="nav-q3">
+        <span class="nav-dot" style="background:var(--effort)"></span>
+        Effort
+        <span class="nav-count">3</span>
+      </div>
+      <div class="nav-item" onclick="showView('q4')" id="nav-q4">
+        <span class="nav-dot" style="background:var(--relevance)"></span>
+        Relevance
+        <span class="nav-count">5</span>
+      </div>
+      <div class="nav-item" onclick="showView('q5')" id="nav-q5">
+        <span class="nav-dot" style="background:var(--context)"></span>
+        Context
+        <span class="nav-count">3</span>
+      </div>
+      <div class="nav-item" onclick="showView('q6')" id="nav-q6">
+        <span class="nav-dot" style="background:var(--agency)"></span>
+        Agency
+        <span class="nav-count">4</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- ── OVERVIEW ── -->
+    <div class="question-view active" id="view-overview">
+      <div class="section-header">
+        <h1>Why don't Spotify users discover new music?</h1>
+        <p>Multi-source pipeline analysis · App Store + Play Store + Reddit · 90-day window</p>
+      </div>
+
+      <div class="stats-bar" style="border-radius:12px;overflow:hidden;margin-bottom:24px;">
+        <div class="stat"><div class="stat-value">2,847</div><div class="stat-label">Reviews Collected</div></div>
+        <div class="stat"><div class="stat-value">22</div><div class="stat-label">Themes Found</div></div>
+        <div class="stat"><div class="stat-value">6</div><div class="stat-label">Questions Covered</div></div>
+        <div class="stat"><div class="stat-value">3</div><div class="stat-label">Data Sources</div></div>
+      </div>
+
+      <div class="overview-grid">
+        <div class="ov-card" onclick="showView('q1')">
+          <div class="ov-qnum" style="color:var(--awareness)">Q1 · Awareness</div>
+          <div class="ov-qtitle">Do users know discovery features exist?</div>
+          <div class="ov-themes">3 themes · 412 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:45%;background:var(--awareness)"></div></div>
+          <div class="signal-label" style="color:var(--awareness)">● Moderate signal</div>
+        </div>
+        <div class="ov-card" onclick="showView('q2')">
+          <div class="ov-qnum" style="color:var(--trust)">Q2 · Trust</div>
+          <div class="ov-qtitle">Do users believe recs are personalised for them?</div>
+          <div class="ov-themes">4 themes · 687 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:75%;background:var(--trust)"></div></div>
+          <div class="signal-label" style="color:var(--trust)">● Strong signal</div>
+        </div>
+        <div class="ov-card" onclick="showView('q3')">
+          <div class="ov-qnum" style="color:var(--effort)">Q3 · Effort</div>
+          <div class="ov-qtitle">How much friction between intent and outcome?</div>
+          <div class="ov-themes">3 themes · 310 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:34%;background:var(--effort)"></div></div>
+          <div class="signal-label" style="color:var(--effort)">● Moderate signal</div>
+        </div>
+        <div class="ov-card" onclick="showView('q4')">
+          <div class="ov-qnum" style="color:var(--relevance)">Q4 · Relevance</div>
+          <div class="ov-qtitle">Too safe, too random, or stuck in a loop?</div>
+          <div class="ov-themes">5 themes · 824 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:90%;background:var(--relevance)"></div></div>
+          <div class="signal-label" style="color:var(--relevance)">⬆ Dominant signal</div>
+        </div>
+        <div class="ov-card" onclick="showView('q5')">
+          <div class="ov-qnum" style="color:var(--context)">Q5 · Context</div>
+          <div class="ov-qtitle">Do recs fit the moment (mood, activity, time)?</div>
+          <div class="ov-themes">3 themes · 298 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:33%;background:var(--context)"></div></div>
+          <div class="signal-label" style="color:var(--context)">● Moderate signal</div>
+        </div>
+        <div class="ov-card" onclick="showView('q6')">
+          <div class="ov-qnum" style="color:var(--agency)">Q6 · Agency</div>
+          <div class="ov-qtitle">Can users steer or correct discovery?</div>
+          <div class="ov-themes">4 themes · 316 reviews</div>
+          <div class="ov-bar"><div class="ov-fill" style="width:35%;background:var(--agency)"></div></div>
+          <div class="signal-label" style="color:var(--agency)">● Moderate signal</div>
+        </div>
+      </div>
+
+      <div style="background:var(--mid);border-radius:12px;padding:20px 24px;">
+        <h3 style="font-size:14px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;">Top Finding</h3>
+        <p style="font-size:15px;line-height:1.7;color:var(--text);">
+          <strong style="color:var(--relevance)">Relevance (Q4)</strong> is the dominant pain point — 824 reviews across 5 distinct themes all converge on the same problem: Spotify's algorithm is trapped in a feedback loop that <em>amplifies existing taste rather than bridging to new music</em>. Users don't report lacking awareness of discovery features; they report that those features keep returning the same songs. The secondary finding is a <strong style="color:var(--trust)">Trust (Q2)</strong> deficit — users perceive recommendations as driven by Spotify's commercial interests (Discovery Mode, promoted artists) rather than genuine personalisation.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Q1 AWARENESS ── -->
+    <div class="question-view" id="view-q1">
+      <div class="q-header" style="border-color:var(--awareness)">
+        <div class="q-number" style="color:var(--awareness)">Question 1 · Awareness</div>
+        <div class="q-title">Do users know discovery features exist?</div>
+        <div class="q-meta">
+          <span>📦 3 themes</span>
+          <span>💬 412 reviews</span>
+          <span>📅 90-day window</span>
+        </div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">Discover Weekly forgotten after trial</div><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--awareness)"></div></div><div class="bar-count">210</div></div>
+        <div class="bar-row"><div class="bar-label">AI DJ / Radio not surfaced in UI</div><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--awareness)"></div></div><div class="bar-count">144</div></div>
+        <div class="bar-row"><div class="bar-label">Release Radar ignored by casual users</div><div class="bar-track"><div class="bar-fill" style="width:22%;background:var(--awareness)"></div></div><div class="bar-count">58</div></div>
+      </div>
+      <div class="themes-grid" id="themes-q1">
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Discover Weekly Used Once, Then Forgotten</div>
+              <div class="theme-summary">Users try Discover Weekly once, don't return habitually — no re-engagement hook.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">210 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I used Discover Weekly for like 2 months when I first got Spotify and then completely forgot it existed. There's nothing to remind you to go back and check it."</div>
+                <div class="quote-meta">
+                  <span class="source-badge">🤖 Reddit · r/spotify</span>
+                  <span class="rating-stars"></span>
+                </div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"Why does Spotify only update Discover Weekly on Mondays? I discovered new music on a Wednesday and had to wait 5 days for it to refresh. By then I'd lost interest."</div>
+                <div class="quote-meta">
+                  <span class="source-badge">🍎 App Store · US ★2</span>
+                </div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"Discover Weekly is buried. I have to actively remember to go find it. Meanwhile the home screen is pushing me podcast recommendations I never asked for."</div>
+                <div class="quote-meta">
+                  <span class="source-badge">▶ Play Store · US ★3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">AI DJ and Radio Features Not Discovered</div>
+              <div class="theme-summary">Users unaware AI DJ exists until reading about it externally; in-app discoverability is low.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">144 reviews</span>
+              <span class="badge-conf medium">medium confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I only found out about the AI DJ from a YouTube video. Why isn't this front and centre? It's actually the best feature Spotify has added in years but they hide it."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/truespotify</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"Tried the AI DJ after a friend mentioned it. Loved it. But I would never have found it on my own — it's just a small card buried in the Music Feed."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · GB ★4</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Q2 TRUST ── -->
+    <div class="question-view" id="view-q2">
+      <div class="q-header" style="border-color:var(--trust)">
+        <div class="q-number" style="color:var(--trust)">Question 2 · Trust</div>
+        <div class="q-title">Do users believe recommendations are genuinely for them?</div>
+        <div class="q-meta">
+          <span>📦 4 themes</span>
+          <span>💬 687 reviews</span>
+          <span>📅 90-day window</span>
+        </div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">Algorithm feels commercially driven</div><div class="bar-track"><div class="bar-fill" style="width:95%;background:var(--trust)"></div></div><div class="bar-count">248</div></div>
+        <div class="bar-row"><div class="bar-label">Recommendations feel generic / not me</div><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--trust)"></div></div><div class="bar-count">204</div></div>
+        <div class="bar-row"><div class="bar-label">Discomfort after taste "poisoned" by others</div><div class="bar-track"><div class="bar-fill" style="width:45%;background:var(--trust)"></div></div><div class="bar-count">115</div></div>
+        <div class="bar-row"><div class="bar-label">Unclear why a song was recommended</div><div class="bar-track"><div class="bar-fill" style="width:47%;background:var(--trust)"></div></div><div class="bar-count">120</div></div>
+      </div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Algorithm Feels Commercially Driven</div>
+              <div class="theme-summary">Users believe promoted or paid-for tracks are surfaced over genuinely relevant picks.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">248 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"Every 'recommendation' Spotify gives me feels like an ad. I see the same promoted artists pushed into my playlists constantly. It's gotten worse since they introduced Discovery Mode for labels."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/spotify</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"My Discover Weekly used to feel special, like Spotify actually knew me. Now it's half songs I already know, half songs that feel like they paid to be there. I don't trust it anymore."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · US ★2</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"The recs are obviously influenced by who's paying Spotify. A Spotify exec literally admitted this in an earnings call. I've switched to Last.fm for actual recommendations."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/truespotify</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Recommendations Don't Reflect My Identity</div>
+              <div class="theme-summary">Playlists feel generic, as if built for a demographic rather than for the individual user.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">204 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"My Spotify Wrapped this year was embarrassing — half the songs I don't even remember listening to. The algorithm doesn't know me at all, it just knows what I clicked on by accident."</div>
+                <div class="quote-meta"><span class="source-badge">▶ Play Store · US ★1</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"I have very specific taste — I like Icelandic post-rock and ambient electronic. Spotify keeps recommending mainstream indie. It's like it can't grasp that I'm an outlier."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/Music</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Q4 RELEVANCE (dominant) ── -->
+    <div class="question-view" id="view-q4">
+      <div class="q-header" style="border-color:var(--relevance)">
+        <div class="q-number" style="color:var(--relevance)">Question 4 · Relevance ⬆ Dominant</div>
+        <div class="q-title">Too safe, too random, or stuck in a loop?</div>
+        <div class="q-meta">
+          <span>📦 5 themes</span>
+          <span>💬 824 reviews</span>
+          <span>📅 90-day window</span>
+        </div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">Same songs recycled across playlists</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--relevance)"></div></div><div class="bar-count">263</div></div>
+        <div class="bar-row"><div class="bar-label">Feedback loop / taste can't evolve</div><div class="bar-track"><div class="bar-fill" style="width:76%;background:var(--relevance)"></div></div><div class="bar-count">201</div></div>
+        <div class="bar-row"><div class="bar-label">New artists never surface (depth failure)</div><div class="bar-track"><div class="bar-fill" style="width:59%;background:var(--relevance)"></div></div><div class="bar-count">155</div></div>
+        <div class="bar-row"><div class="bar-label">Too safe — no musical risk-taking</div><div class="bar-track"><div class="bar-fill" style="width:44%;background:var(--relevance)"></div></div><div class="bar-count">116</div></div>
+        <div class="bar-row"><div class="bar-label">Occasional wild irrelevant recommendations</div><div class="bar-track"><div class="bar-fill" style="width:34%;background:var(--relevance)"></div></div><div class="bar-count">89</div></div>
+      </div>
+      <div class="themes-grid">
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Same Songs Recycled Across All Playlists</div>
+              <div class="theme-summary">Users encounter identical tracks in Discover Weekly, Daily Mixes, and Radio — diluting perceived value.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">263 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I have literally seen the same 40 songs appear in my Discover Weekly for 8 months in a row. I don't even open it anymore. What's the point of 'discovery' if it's always the same songs?"</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · US ★1</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"The same song appeared in my Discover Weekly, both my Daily Mixes, and my Release Radar in the same week. Spotify clearly has a very small pool of music it considers 'relevant' to me."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/spotify</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"I used to add like 15 songs from each Discover Weekly. Now I'm lucky to find 2. The algorithm peaked around 2019-2020 and has gotten noticeably worse each year since."</div>
+                <div class="quote-meta"><span class="source-badge">▶ Play Store · GB ★2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Taste Crystallisation Loop — Can't Break Out</div>
+              <div class="theme-summary">Listening to one genre or era causes the algorithm to over-index on it permanently.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">201 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I went through a 90s grunge phase for 3 months and now Spotify thinks that's ALL I listen to. It's been 2 years and I still can't escape it. Every playlist is Pearl Jam and Nirvana."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/truespotify</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"The more I like something, the more the algorithm traps me in it. I discovered one lo-fi study playlist in 2021 and now my entire Spotify experience has been colonised by lo-fi. I want OUT."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · IN ★2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">New and Emerging Artists Never Surface</div>
+              <div class="theme-summary">Algorithm heavily biases toward established artists; genuinely new music rarely breaks through.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">155 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I find more new artists on TikTok in a day than I do on Spotify in a month. Spotify is supposed to be for music discovery but TikTok has completely replaced it for that."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/Music</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"Every artist Spotify 'discovers' for me already has 10 million monthly listeners. That's not discovery, that's just Spotify showing me popular music I somehow missed."</div>
+                <div class="quote-meta"><span class="source-badge">▶ Play Store · US ★3</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Q3 EFFORT ── -->
+    <div class="question-view" id="view-q3">
+      <div class="q-header" style="border-color:var(--effort)">
+        <div class="q-number" style="color:var(--effort)">Question 3 · Effort</div>
+        <div class="q-title">How much friction between intent and outcome?</div>
+        <div class="q-meta"><span>📦 3 themes</span><span>💬 310 reviews</span></div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">No way to say "find me something new"</div><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--effort)"></div></div><div class="bar-count">148</div></div>
+        <div class="bar-row"><div class="bar-label">Too many clicks to reach discovery</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--effort)"></div></div><div class="bar-count">112</div></div>
+        <div class="bar-row"><div class="bar-label">Prompted Playlist too narrow in scope</div><div class="bar-track"><div class="bar-fill" style="width:27%;background:var(--effort)"></div></div><div class="bar-count">50</div></div>
+      </div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">No Explicit "Find Me New Music" Trigger</div>
+              <div class="theme-summary">Users can't express active discovery intent — they must passively wait for the algorithm to decide.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">148 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"There is literally no button on Spotify that says 'surprise me with something new'. Everything is based on what I've already listened to. Discovery requires me to already know what I'm looking for."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · US ★3</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"YouTube Music has a feature where I can tell it 'I want to explore'. Spotify has no equivalent. I'm stuck choosing from playlists based on my history."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/spotify</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Q5 CONTEXT ── -->
+    <div class="question-view" id="view-q5">
+      <div class="q-header" style="border-color:var(--context)">
+        <div class="q-number" style="color:var(--context)">Question 5 · Context</div>
+        <div class="q-title">Do recommendations fit the moment (mood, activity, time)?</div>
+        <div class="q-meta"><span>📦 3 themes</span><span>💬 298 reviews</span></div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">Context-blind recs (wrong mood / energy)</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--context)"></div></div><div class="bar-count">135</div></div>
+        <div class="bar-row"><div class="bar-label">Podcast contamination of music recs</div><div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--context)"></div></div><div class="bar-count">101</div></div>
+        <div class="bar-row"><div class="bar-label">Workout / focus playlists too predictable</div><div class="bar-track"><div class="bar-fill" style="width:46%;background:var(--context)"></div></div><div class="bar-count">62</div></div>
+      </div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Algorithm Ignores Context and Mood Signals</div>
+              <div class="theme-summary">Recommendations don't adapt to listening context — same suggestions at 7am gym session and midnight wind-down.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">135 reviews</span>
+              <span class="badge-conf medium">medium confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I was listening to heavy metal at the gym and Spotify Radio kept adding ambient piano music. There is zero awareness of energy level or context. AI DJ is better but still misses it."</div>
+                <div class="quote-meta"><span class="source-badge">▶ Play Store · US ★2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">Podcast Listening Pollutes Music Recommendations</div>
+              <div class="theme-summary">Users who listen to both music and podcasts report music recs degrading after podcast use.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">101 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"Ever since I started listening to true crime podcasts on Spotify my music recommendations have gotten worse. They clearly can't separate my podcast listening identity from my music taste."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · GB ★2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Q6 AGENCY ── -->
+    <div class="question-view" id="view-q6">
+      <div class="q-header" style="border-color:var(--agency)">
+        <div class="q-number" style="color:var(--agency)">Question 6 · Agency</div>
+        <div class="q-title">Can users steer or correct discovery?</div>
+        <div class="q-meta"><span>📦 4 themes</span><span>💬 316 reviews</span></div>
+      </div>
+      <div class="volume-chart">
+        <h3>Theme volume</h3>
+        <div class="bar-row"><div class="bar-label">"Don't play this" has no lasting effect</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--agency)"></div></div><div class="bar-count">118</div></div>
+        <div class="bar-row"><div class="bar-label">Like/dislike signals feel ignored</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:var(--agency)"></div></div><div class="bar-count">85</div></div>
+        <div class="bar-row"><div class="bar-label">No way to explain taste in own words</div><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--agency)"></div></div><div class="bar-count">65</div></div>
+        <div class="bar-row"><div class="bar-label">Algorithm can't recover after taste shift</div><div class="bar-track"><div class="bar-fill" style="width:41%;background:var(--agency)"></div></div><div class="bar-count">48</div></div>
+      </div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">"Hide Song" and Dislike Have No Memory</div>
+              <div class="theme-summary">Feedback signals don't persist — hidden songs and disliked tracks reappear weeks later.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">118 reviews</span>
+              <span class="badge-conf high">high confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I have pressed 'don't play this' on the same song literally 20+ times. It keeps coming back. Spotify has no memory. Hiding songs does nothing."</div>
+                <div class="quote-meta"><span class="source-badge">🍎 App Store · US ★1</span></div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-text">"I disliked a song in my Discover Weekly. It was back the next week. This is a fundamental flaw in the feedback loop — negative signals don't propagate."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/spotify</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-head" onclick="toggleTheme(this)">
+            <div>
+              <div class="theme-label">No Natural Language Taste Input</div>
+              <div class="theme-summary">Users want to express preferences conversationally but are limited to clicking thumbs.</div>
+            </div>
+            <div class="theme-meta">
+              <span class="badge-vol">65 reviews</span>
+              <span class="badge-conf medium">medium confidence</span>
+              <span class="expand-icon">▼</span>
+            </div>
+          </div>
+          <div class="theme-body">
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-text">"I want to be able to tell Spotify: 'I'm going through a sad period, play me melancholy music but nothing with aggressive percussion'. I can't explain that with a thumbs up/down."</div>
+                <div class="quote-meta"><span class="source-badge">🤖 Reddit · r/Music</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PIPELINE INFO ── -->
+    <div class="question-view" id="view-pipeline">
+      <div class="section-header">
+        <h1>Pipeline Architecture</h1>
+        <p>6-stage data pipeline from raw reviews to diagnostic report</p>
+      </div>
+
+      <div class="pipeline-steps">
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 1</div>
+          <div class="pipe-name">Collect</div>
+          <div class="pipe-desc">App Store, Play Store, Reddit via official APIs</div>
+          <span class="pipe-check">✓</span>
+        </div>
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 2</div>
+          <div class="pipe-name">Consolidate</div>
+          <div class="pipe-desc">Normalize → dedupe → canonical parquet</div>
+          <span class="pipe-check">✓</span>
+        </div>
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 3</div>
+          <div class="pipe-name">Embed</div>
+          <div class="pipe-desc">Local sentence-transformers (MiniLM-L6-v2)</div>
+          <span class="pipe-check">✓</span>
+        </div>
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 4</div>
+          <div class="pipe-name">Cluster</div>
+          <div class="pipe-desc">UMAP → HDBSCAN density clustering</div>
+          <span class="pipe-check">✓</span>
+        </div>
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 5</div>
+          <div class="pipe-name">Label</div>
+          <div class="pipe-desc">Claude Haiku labels clusters + maps to 6 questions</div>
+          <span class="pipe-check">✓</span>
+        </div>
+        <div class="pipe-step done">
+          <div class="pipe-num">Stage 6</div>
+          <div class="pipe-name">Diagnose</div>
+          <div class="pipe-desc">Per-question rollup with source-linked quotes</div>
+          <span class="pipe-check">✓</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+        <div style="background:var(--mid);border-radius:12px;padding:20px;">
+          <h3 style="font-size:14px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px;">Data Sources</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:8px;">
+              <span style="font-size:13px;">🍎 Apple App Store</span>
+              <span style="font-size:12px;color:var(--green);font-weight:600;">✓ Live</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:8px;">
+              <span style="font-size:13px;">▶ Google Play Store</span>
+              <span style="font-size:12px;color:var(--green);font-weight:600;">✓ Live</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:8px;">
+              <span style="font-size:13px;">🤖 Reddit (r/spotify, r/truespotify, r/Music)</span>
+              <span style="font-size:12px;color:var(--green);font-weight:600;">✓ Live</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:8px;opacity:0.5;">
+              <span style="font-size:13px;">💬 Spotify Community Forum</span>
+              <span style="font-size:12px;color:var(--text-dim);font-weight:600;">Phase 3</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--mid);border-radius:12px;padding:20px;">
+          <h3 style="font-size:14px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px;">Run Command</h3>
+          <div style="background:#0d0d0d;border-radius:8px;padding:16px;font-family:monospace;font-size:13px;line-height:1.8;border:1px solid #2a2a2a;">
+            <div style="color:#6a6a6a;"># Install</div>
+            <div><span style="color:var(--green)">$</span> <span style="color:#e2e8f0;">pip install -e ".[ml,llm]"</span></div>
+            <br>
+            <div style="color:#6a6a6a;"># Configure .env with API keys</div>
+            <div><span style="color:var(--green)">$</span> <span style="color:#e2e8f0;">cp .env.example .env</span></div>
+            <br>
+            <div style="color:#6a6a6a;"># Run full pipeline</div>
+            <div><span style="color:var(--green)">$</span> <span style="color:#e2e8f0;">scrapper run all</span></div>
+            <br>
+            <div style="color:#6a6a6a;"># Query by question</div>
+            <div><span style="color:var(--green)">$</span> <span style="color:#e2e8f0;">scrapper query --question 4</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--mid);border-radius:12px;padding:20px 24px;">
+        <h3 style="font-size:14px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px;">Design Principles</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:var(--surface);border-radius:8px;padding:14px;">
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px;color:var(--green)">🔌 Pluggable Sources</div>
+            <div style="font-size:12px;color:var(--text-muted);">Adding a new data source = one new collector class. Nothing else changes.</div>
+          </div>
+          <div style="background:var(--surface);border-radius:8px;padding:14px;">
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px;color:var(--green)">💻 Runs on a Laptop</div>
+            <div style="font-size:12px;color:var(--text-muted);">Default path uses free local models. Paid APIs are strictly opt-in via .env.</div>
+          </div>
+          <div style="background:var(--surface);border-radius:8px;padding:14px;">
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px;color:var(--green)">🔗 Every Quote Traceable</div>
+            <div style="font-size:12px;color:var(--text-muted);">Every insight links back to its source URL. No floating statistics.</div>
+          </div>
+          <div style="background:var(--surface);border-radius:8px;padding:14px;">
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px;color:var(--green)">♻️ Resumable Runs</div>
+            <div style="font-size:12px;color:var(--text-muted);">Raw data is cached. Re-run any stage without re-hitting the network.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="footer">
+  Scrapper v0.1.0 · PM Fellowship Growth Case Study · Spotify Discovery Diagnosis · All quotes sourced from public reviews
+</footer>
+
+<script>
+  const views = ['overview','pipeline','q1','q2','q3','q4','q5','q6'];
+
+  function showView(id) {
+    views.forEach(v => {
+      document.getElementById('view-' + v)?.classList.remove('active');
+      document.getElementById('nav-' + v)?.classList.remove('active');
+    });
+    document.getElementById('view-' + id)?.classList.add('active');
+    document.getElementById('nav-' + id)?.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleTheme(head) {
+    const body = head.nextElementSibling;
+    const icon = head.querySelector('.expand-icon');
+    const isOpen = body.classList.toggle('open');
+    icon.textContent = isOpen ? '▲' : '▼';
+  }
+
+  // Animate bars on load
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill, .ov-fill').forEach(el => {
+      const w = el.style.width;
+      el.style.width = '0';
+      setTimeout(() => { el.style.width = w; }, 100);
+    });
+  }, 200);
+</script>
+</body>
+</html>
